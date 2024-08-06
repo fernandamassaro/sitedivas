@@ -1,1 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@latest/swiper-bundle.min.css">
+    <title>Loja DIVA’S</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: monospace;
+        }
+
+        body,
+        html {
+            width: 100%;
+            min-height: 100vh;
+            background-color: #ffffff;
+            color: rgb(7, 7, 7);
+            overflow-x: hidden;
+        }
+
+        input {
+            background-color: #000;
+            border: 0;
+            outline: 0;
+            text-decoration: none;
+            border-bottom: solid 3px white;
+            padding: 10px;
+            margin: 0 -1rem;
+            margin-top: 1rem;
+        }
+
+        input::placeholder {
+            color: white;
+        }
+
+        #flexNav {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 1rem;
+        }
+
+        i {
+            margin: 0 1rem;
+            font-size: 25px;
+        }
+
+        header {
+            text-align: center;
+            justify-content: center;
+            padding: 1rem;
+        }
+
+        h2 {
+            margin: 3rem 0;
+            font-size: 69px;
+        }
+
+        img {
+            margin: 1rem 0;
+            width: 75%;
+            max-width: 500px; /* Limitar a largura máxima */
+            height: auto;
+            cursor: pointer; /* Cursor de ponteiro para indicar interatividade */
+            transition: transform 0.3s ease-in-out;
+        }
+
+        img:hover {
+            transform: scale(1.05); /* Efeito hover para imagens maiores */
+        }
+
+        h5 {
+            text-align: center;
+        }
+
+        .small-images {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem; 
+            margin-top: 1rem;
+        }
+
+        .small-images div {
+            text-align: center;
+            position: relative;
+        }
+
+        .small-images img {
+            width: 100px; 
+            cursor: pointer;
+            margin-bottom: 0.5rem;
+            transition: transform 0.3s ease-in-out; 
+        }
+
+        .small-images img:hover {
+            transform: scale(1.1);
+        }
+
+        .price {
+            font-size: 18px;
+            color: #333;
+        }
+
+        
+        .modal {
+            display: none; 
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8); 
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal-content {
+            max-width: 80%;
+            max-height: 80%;
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+        }
+         .swiper-button-prev {
+            color: black;
+         }
+         .swiper-button-next{
+            color: black;
+         }
+    </style>
+</head>
+
+<body>
+    <div id="flexNav">
+        <i class="fa-solid fa-bars"></i>
+        <i class="fa-solid fa-user"></i>
+        <i class="fa-solid fa-heart"></i>
+        <i class="fa-solid fa-bookmark"></i>
+    </div>
+    <header>
+        <h2>DIVA’S</h2>
+        <div style="display: flex; align-items: center; justify-content: center; gap: 1rem; margin-top: 1rem;">
+            <input type="text" placeholder="O que você procura">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <img src="imgdivas.jpeg" alt="Main Product Image">
+
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="small-images"></div>
+            <div>
+                <div class="swiper-slide"><img src="dior.jpg" alt="Small Image 1">
+                <div class="price">R$ 229,90</div>
+                </div>
+            </div>
+            <div>
+                <div class="swiper-slide"><img src="nars.jpg" alt="Small Image 2">
+                <div class="price">R$149,90</div>
+                </div>
+            </div>
+            <div>
+                <div class="swiper-slide"><img src="blushrare.jpg" alt= "Small Image 3">
+                <div class="price">R$ 159,90</div>
+                </div>
+            </div>
+        <div>
+            <div class="swiper-slide"><img src="glossfenty.jpg" alt="Small Image 4" class="thumbnail">
+            <div class="price">R$ 149,90</div>
+            </div>
+        </div>
+        <div>
+            <div class="swiper-slide"><img src="kylie.jpg" alt="Small Image 5" class="thumbnail">
+            <div class="price">R$ 139,00</div>
+            </div>
+        </div>
+        <div>
+            <div class="swiper-slide"><img src="rhode.jpg" alt="Small Image 6" class="thumbnail">
+            <div class="price">R$ 210,90</div>
+            </div>
+        </div>
+        <div>
+            <div class="swiper-slide"><img src="basesfenty.jpg" alt="Small Image 7" class="thumbnail">
+            <div class="price">R$ 219,89</div>
+            </div>
+        </div>
+        <div>
+            <div class="swiper-slide"><img src="rimel.jpg" alt="Small Image 8" class="thumbnail">
+            <div class="price">R$ 339,90</div>
+            </div>
+        </div>
+        <div>
+            <div class="swiper-slide"><img src="contorno.jpg" alt="Small Image 10" class="thumbnail">
+            <div class="price">R$ 339,90</div>
+            </div>
+        </div>
+        <div>
+            <div class="swiper-slide"><img src="sombra.jpg" alt="Small Image 11" class="thumbnail">
+            <div class="price">R$ 339,90</div>
+            </div>
+            <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+        </div>
+
+    </header>
+    <main>
+        <h5></h5>
+    </main>
+
+    <div class="modal" id="modal">
+        <span class="close" id="closeModal">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script src="https://kit.fontawesome.com/bdf57aa9a9.js" crossorigin="anonymous"></script>
+    <script>
+    
+        const thumbnails = document.querySelectorAll('.thumbnail');
+        const modal = document.getElementById('modal');
+        const modalImg = document.getElementById('modalImage');
+        const closeModal = document.getElementById('closeModal');
+
+        thumbnails.forEach(thumbnail => {
+            thumbnail.addEventListener('click', () => {
+                modal.style.display = 'flex';
+                modalImg.src = thumbnail.src;
+            });
+        });
+
+        closeModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        modal.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+
+</html>

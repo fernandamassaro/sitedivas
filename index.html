@@ -65,14 +65,14 @@
         img {
             margin: 1rem 0;
             width: 75%;
-            max-width: 500px; /* Limitar a largura máxima */
+            max-width: 500px; 
             height: auto;
-            cursor: pointer; /* Cursor de ponteiro para indicar interatividade */
+            cursor: pointer; 
             transition: transform 0.3s ease-in-out;
         }
 
         img:hover {
-            transform: scale(1.05); /* Efeito hover para imagens maiores */
+            transform: scale(2.00); 
         }
 
         h5 {
@@ -82,7 +82,7 @@
         .small-images {
             display: flex;
             justify-content: center;
-            gap: 1.5rem; 
+            gap: 2.5 rem; 
             margin-top: 1rem;
         }
 
@@ -140,6 +140,40 @@
          .swiper-button-next{
             color: black;
          }
+         
+         .footer {
+    background-color: black; 
+    color: #fff; 
+    padding: 20px 0; 
+    text-align: center; 
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-nav ul {
+    list-style: none; 
+    padding: 0;
+}
+
+.footer-nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.footer-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-nav ul li a:hover {
+    text-decoration: underline;
+}
     </style>
 </head>
 
@@ -249,6 +283,20 @@
             }
         });
     </script>
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024</p>
+            <p> Meu Site.</p> 
+            <p>Todos direitos reservados.</p>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Contato</a></li>
+                    <li><a href="#">Política de Privacidade</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
 </body>
 
 </html>
